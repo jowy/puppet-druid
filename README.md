@@ -89,8 +89,8 @@ This is a basic puppet module for managing various [Druid] nodes. Druid is an op
 
 GNU General Public License v3 (GPL-3)
 
-[Puppet stdlib]:https://forge.puppetlabs.com/puppetlabs/concat
-[Puppet supervisor]:https://forge.puppetlabs.com/puppetlabs/concat
+[Puppet stdlib]:https://github.com/puppetlabs/puppetlabs-stdlib
+[Puppet supervisor]:https://github.com/proletaryo/puppet-supervisor
 [Puppet concat]:https://forge.puppetlabs.com/puppetlabs/concat
 [Druid]:http://druid.io/
 [ZooKeeper]:http://zookeeper.apache.org/
