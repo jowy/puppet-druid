@@ -1,0 +1,6 @@
+name 'jowy-druid'
+version '0.0.1'
+description ''
+project_page ''
+license 'GPL-3'
+author 'Joseph Pugh <leetbulb@gmail.com>'

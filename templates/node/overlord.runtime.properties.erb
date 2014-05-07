@@ -1,0 +1,8 @@
+druid.service=historical
+
+druid.selectors.indexing.serviceName=overlord
+druid.indexer.queue.startDelay=<%= @queue_delay %>
+druid.indexer.runner.javaOpts="<%= @runner_opts %>"
+druid.indexer.runner.startPort=<%= @runner_port %>
+druid.indexer.fork.property.druid.computation.buffer.size=<%= @fork_processing_buffer %>
+druid.indexer.fork.property.druid.processing.numThreads=<%= @fork_processing_threads %>

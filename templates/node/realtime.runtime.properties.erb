@@ -1,0 +1,7 @@
+druid.service=realtime
+
+druid.publish.type=<%= @publish_type %>
+
+druid.segmentCache.locations=[{ "path": "<%= @segment_cache_dir -%>", "maxSize": "<%= @segment_cache_max_size -%>" }]
+
+druid.realtime.specFile=/etc/druid/realtime/realtime.spec

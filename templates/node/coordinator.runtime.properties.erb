@@ -1,0 +1,12 @@
+druid.service=coordinator
+
+druid.coordinator.period=<%= @period %>
+druid.coordinator.period.indexingPeriod=<%= @indexing_period %>
+druid.coordinator.startDelay=<%= @start_delay %>
+druid.coordinator.merge.on=<%= @merge_on %>
+druid.coordinator.conversion.on=<%= @conversion_on %>
+druid.coordinator.load.timeout=<%= @load_timeout %>
+
+druid.manager.segment.pollDuration=<%= @segment_poll_duration %>
+druid.manager.rules.pollDuration=<%= @rules_poll_duration %>
+druid.manager.rules.defaultTier=<%= @rules_default_tier %>

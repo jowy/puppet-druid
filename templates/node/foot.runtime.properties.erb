@@ -1,0 +1,12 @@
+
+
+<% if @custom_properties -%>
+<% require 'json' -%>
+<% @custom_properties.sort_by {|k,v| k}.each do |key,value| -%>
+<% if value.is_a?(Hash) or value.is_a?(Array) -%>
+<%= key -%>=<%= value.to_json %>
+<% else -%>
+<%= key -%>=<%= value %>
+<% end -%>
+<% end -%>
+<% end -%>
