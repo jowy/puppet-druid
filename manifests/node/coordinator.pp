@@ -22,6 +22,13 @@ class druid::node::coordinator (
 
   $mysql_uri = "jdbc:mysql://${mysql_host}:${mysql_port}/${mysql_db}"
 
+  file { '/etc/druid/coordinator':
+    ensure => 'directory',
+    mode   => '0755',
+    owner  => 'root',
+    group  => 'root',
+  }
+
   $runprops = "/etc/druid/coordinator/runtime.properties"
 
   Concat[$runprops] ~> Supervisor::Program['druid-coordinator']
