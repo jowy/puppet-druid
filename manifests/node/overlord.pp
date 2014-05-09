@@ -2,7 +2,7 @@ class druid::node::overlord (
 
   $jvm_heap_max               = '256m',             # -Xmx
 
-  $listen                     = 'localhost',        # druid.host
+  $listen                     = $fqdn,              # druid.host
   $port                       = '8080',             # druid.port
 
   $queue_delay                = 'PT0M',             # druid.indexer.queue.startDelay

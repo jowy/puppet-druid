@@ -2,7 +2,7 @@ class druid::node::coordinator (
 
   $jvm_heap_max           = '256m',         # -Xmx
 
-  $listen                 = 'localhost',    # druid.host
+  $listen                 = $fqdn,          # druid.host
   $port                   = '8080',         # druid.port
 
   $period                 = 'PT60S',        # druid.coordinator.period

@@ -26,7 +26,7 @@ class druid (
   $zk_host                = 'localhost',  # druid.zk.service.host
   $zk_compress            = false,        # druid.curator.compress
   $server_max_size        = '100000000',  # druid.server.maxSize
-  $http_threads           = '100000000',  # druid.server.http.numThreads
+  $http_threads           = 2,            # druid.server.http.numThreads
 
 ) {
 
