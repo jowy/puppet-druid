@@ -5,11 +5,11 @@ class druid::node::realtime (
   $listen                 = $fqdn,                  # druid.host
   $port                   = '8080',                 # druid.port
 
-  $processing_buffer      = '10000000',             # druid.processing.buffer.sizeBytes
-  $processing_threads     = $processorcount * 2,    # druid.processing.numThreads
+  $processing_buffer      = '134217728',            # druid.processing.buffer.sizeBytes
+  $processing_threads     = $processorcount,        # druid.processing.numThreads
 
                                                     # todo: support many
-  $segment_cache_max_size = '',                     # druid.segmentCache.locations => [0].maxSize
+  $segment_cache_max_size = '524288000',            # druid.segmentCache.locations => [0].maxSize
 
   $spec_hash              = {},
 

@@ -5,10 +5,10 @@ class druid::node::historical (
   $listen                 = $fqdn,                  # druid.host
   $port                   = '8080',                 # druid.port
 
-  $processing_buffer      = '10000000',             # druid.processing.buffer.sizeBytes
-  $processing_threads     = $processorcount * 2,    # druid.processing.numThreads
+  $processing_buffer      = '134217728',            # druid.processing.buffer.sizeBytes
+  $processing_threads     = $processorcount,        # druid.processing.numThreads
 
-  $segment_cache_max_size = '',                     # druid.segmentCache.locations
+  $segment_cache_max_size = '524288000',                     # druid.segmentCache.locations
 
   $extensions = [
     "io.druid.extensions:druid-s3-extensions:${druid::version}"

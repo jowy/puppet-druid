@@ -9,8 +9,8 @@ class druid::node::overlord (
   $runner_opts                = '-server -Xmx1g',   # druid.indexer.runner.javaOpts
   $runner_port                = '8081',             # druid.indexer.runner.startPort
 
-  $fork_processing_threads    = '2',                # druid.indexer.fork.property.druid.processing.numThreads
-  $fork_processing_buffer     = '10000000',         # druid.indexer.fork.property.druid.computation.buffer.size
+  $fork_processing_threads    = $processorcount,    # druid.indexer.fork.property.druid.processing.numThreads
+  $fork_processing_buffer     = '134217728',        # druid.indexer.fork.property.druid.computation.buffer.size
 
   $extensions = [
     "io.druid.extensions:druid-s3-extensions:${druid::version}",

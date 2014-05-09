@@ -10,11 +10,11 @@ class druid::node::broker (
   $zk_host              = 'localhost',          # druid.zk.service.host
   $zk_compress          = false,                # druid.curator.compress
 
-  $server_max_size      = '100000000',          # druid.server.maxSize
-  $http_threads         = 2,                    # druid.server.http.numThreads
+  $server_max_size      = '524288000',          # druid.server.maxSize
+  $http_threads         = $processorcount,      # druid.server.http.numThreads
 
-  $processing_buffer    = '10000000',           # druid.processing.buffer.sizeBytes
-  $processing_threads   = $processorcount * 2,  # druid.processing.numThreads
+  $processing_buffer    = '134217728',          # druid.processing.buffer.sizeBytes
+  $processing_threads   = $processorcount,      # druid.processing.numThreads
 
 ) inherits druid {
 
