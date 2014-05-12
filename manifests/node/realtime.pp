@@ -8,6 +8,8 @@ class druid::node::realtime (
   $processing_buffer      = '134217728',            # druid.processing.buffer.sizeBytes
   $processing_threads     = $processorcount,        # druid.processing.numThreads
 
+  $publish_type           = 'db',
+
                                                     # todo: support many
   $segment_cache_max_size = '524288000',            # druid.segmentCache.locations => [0].maxSize
 
