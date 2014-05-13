@@ -24,9 +24,10 @@ class druid (
   $timezone               = 'UTC',        # -Duser.timezone
   $encoding               = 'UTF-8',      # -Dfile.encoding
   $zk_host                = 'localhost',  # druid.zk.service.host
-  $zk_compress            = false,        # druid.curator.compress
+  $zk_compress            = 'false',      # druid.curator.compress
+  $zk_announcer           = 'legacy',     # druid.announcer.type
   $server_max_size        = '100000000',  # druid.server.maxSize
-  $http_threads           = 2,            # druid.server.http.numThreads
+  $http_threads           = 10,           # druid.server.http.numThreads
 
 ) {
 

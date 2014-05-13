@@ -9,7 +9,7 @@
 druid.host=<%= @listen %>
 druid.port=<%= @port %>
 druid.zk.service.host=<%= @zk_host %>
-druid.announcer.type=batch
+druid.announcer.type=<%= @zk_announcer %>
 druid.curator.compress=<%= @zk_compress %>
 
 <% if @mysql_uri -%>
