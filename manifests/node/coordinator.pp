@@ -1,7 +1,5 @@
 class druid::node::coordinator (
 
-  $jvm_heap_max           = '256m',         # -Xmx
-
   $listen                 = $fqdn,          # druid.host
   $port                   = '8080',         # druid.port
 

@@ -1,17 +1,7 @@
 class druid::node::broker (
 
-  $jvm_heap_max         = '256m',               # -Xmx
-  $timezone             = 'UTC',                # -Duser.timezone
-  $encoding             = 'UTF-8',              # -Dfile.encoding
-
   $listen               = $fqdn,                # druid.host
   $port                 = '8080',               # druid.port
-
-  $zk_host              = 'localhost',          # druid.zk.service.host
-  $zk_compress          = false,                # druid.curator.compress
-
-  $server_max_size      = '524288000',          # druid.server.maxSize
-  $http_threads         = $processorcount,      # druid.server.http.numThreads
 
   $processing_buffer    = '134217728',          # druid.processing.buffer.sizeBytes
   $processing_threads   = $processorcount,      # druid.processing.numThreads
