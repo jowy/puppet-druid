@@ -6,7 +6,9 @@ class druid::node::historical (
   $processing_buffer      = '134217728',            # druid.processing.buffer.sizeBytes
   $processing_threads     = $processorcount,        # druid.processing.numThreads
 
-  $segment_cache_max_size = '524288000',                     # druid.segmentCache.locations
+  $segment_cache_max_size = '524288000',            # druid.segmentCache.locations
+
+  $server_max_size        = '524288000',            # druid.server.maxSize
 
   $extensions = [
     "io.druid.extensions:druid-s3-extensions:${druid::version}"
