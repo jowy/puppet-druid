@@ -28,7 +28,7 @@ class druid::install (
   exec { 'download_druid_version':
     command => "${download_tool} ${source_path} ${release_repo}/${release_file} 2> /dev/null",
     creates => $source_path,
-    timeout => 60,
+    timeout => 300,
     user    => 'druid',
   }
 
