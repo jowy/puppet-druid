@@ -1,6 +1,6 @@
 class druid (
 
-  $version                = '0.6.105',
+  $version                = '0.6.121',
   $download_tool          = '/usr/bin/wget -O',
   $install_java           = true,
   $java_package           = 'openjdk-7-jre-headless',
