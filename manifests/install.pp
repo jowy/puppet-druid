@@ -33,7 +33,7 @@ class druid::install (
   }
 
   exec { 'extract_druid_version':
-    command     => "/bin/tar zxf ${source_path} -C ${release_dir}/ 2> /dev/null",
+    command     => "/bin/tar xf ${source_path} -C ${release_dir}/ 2> /dev/null",
     refreshonly => true,
     user        => 'druid',
   }
