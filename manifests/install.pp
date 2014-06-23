@@ -1,6 +1,6 @@
 class druid::install (
 
-  $version        = '0.6.105',
+  $version        = '0.6.121',
   $download_tool  = '/usr/bin/wget -O',
   $druid_user     = 'druid',
   $druid_dir      = '/var/lib/druid',
