@@ -2,10 +2,6 @@
 # this file is managed by puppet
 # please do not change
 #
--server
--Xmx<%= @jvm_heap_max %>
--Duser.timezone=<%= @timezone %>
--Dfile.encoding=<%= @encoding %>
 druid.host=<%= @listen %>
 druid.port=<%= @port %>
 druid.zk.service.host=<%= @zk_host %>

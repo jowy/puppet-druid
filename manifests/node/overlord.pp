@@ -59,7 +59,7 @@ class druid::node::overlord (
   supervisor::program { 'druid-overlord':
     ensure      => present,
     enable      => true,
-    command     => "/usr/bin/java -classpath '${druid::druid_dir}/current/*:/etc/druid/overlord' io.druid.cli.Main server overlord",
+    command     => "/usr/bin/java -Xmx$jvm_heap_max -Duser.timezone=$timezone -Dfile.encoding=$encoding -classpath '${druid::druid_dir}/current/*:/etc/druid/overlord' io.druid.cli.Main server overlord",
     directory   => $druid::druid_dir,
     user        => 'druid',
     group       => 'druid',

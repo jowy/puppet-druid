@@ -51,7 +51,7 @@ class druid::node::broker (
   supervisor::program { 'druid-broker':
     ensure      => present,
     enable      => true,
-    command     => "/usr/bin/java -classpath '${druid::druid_dir}/current/*:/etc/druid/broker' io.druid.cli.Main server broker",
+    command     => "/usr/bin/java -Xmx$jvm_heap_max -Duser.timezone=$timezone -Dfile.encoding=$encoding -classpath '${druid::druid_dir}/current/*:/etc/druid/broker' io.druid.cli.Main server broker",
     directory   => $druid::druid_dir,
     user        => 'druid',
     group       => 'druid',
