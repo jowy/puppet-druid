@@ -14,7 +14,9 @@ class druid (
   $mysql_user             = 'root',       # druid.db.connector.user
   $mysql_pass             = '',           # druid.db.connector.password
   $use_validation_query   = 'true',       # druid.db.connector.useValidationQuery
+  $jvm_thread_stack_size  = '512m',       # -Xss
   $jvm_heap_max           = '256m',       # -Xmx
+  $jvm_max_perm_size      = '64m',        # -XX:MaxPermSize
 
   $storage_type           = 's3',         # druid.storage.type
   $storage_bucket         = '',           # druid.storage.bucket

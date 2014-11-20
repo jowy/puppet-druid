@@ -68,7 +68,7 @@ class druid::node::historical (
   supervisor::program { 'druid-historical':
     ensure      => present,
     enable      => true,
-    command     => "/usr/bin/java -Xmx$jvm_heap_max -Duser.timezone=$timezone -Dfile.encoding=$encoding -classpath '${druid::druid_dir}/current/*:/etc/druid/historical' io.druid.cli.Main server historical",
+    command     => "/usr/bin/java -Xss$jvm_thread_stack_size -Xmx$jvm_heap_max  -XX:MaxPermSize=$jvm_max_perm_size -Duser.timezone=$timezone -Dfile.encoding=$encoding -classpath '${druid::druid_dir}/current/*:/etc/druid/historical' io.druid.cli.Main server historical",
     directory   => $druid::druid_dir,
     user        => 'druid',
     group       => 'druid',
