@@ -80,7 +80,7 @@ class druid::node::realtime (
   supervisor::program { 'druid-realtime':
     ensure      => present,
     enable      => true,
-    command     => "/usr/bin/java -classpath '${druid::druid_dir}/current/*:/etc/druid/realtime' io.druid.cli.Main server realtime",
+    command     => "/usr/bin/java -Xss$jvm_thread_stack_size -Xmx$jvm_heap_max  -XX:MaxPermSize=$jvm_max_perm_size -Duser.timezone=$timezone -Dfile.encoding=$encoding -classpath '${druid::druid_dir}/current/*:/etc/druid/realtime' io.druid.cli.Main server realtime",
     directory   => $druid::druid_dir,
     user        => 'druid',
     group       => 'druid',
